@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealEstate-Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="assests/logo.jpg" alt="Logo" class="logo-img">
+      <span>REW</span>
+    </div>
+
+    <!-- HAMBURGER (visible only on mobile) -->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-actions">
+      <nav id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#properties">Properties</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="open-add" class="btn">+ Add Listing</button>
+    </div>
+  </div>
+</header>
+
+<!-- Add Listing Modal -->
+<div id="addListModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Add New Property</h2>
+    <form id="propertyForm">
+      <label for="title">Property Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter title" required>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" placeholder="Enter price" required>
+
+      <label for="image">Property Image</label>
+      <input type="file" id="image" name="image" accept="image/*">
+
+      <button type="submit" class="btn">Add Property</button>
+    </form>
+  </div>
+</div>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h5>REAL ESTATE PROJECT</h5>
+      <h1>FIND YOUR <span style="color:rgb(165, 114, 32);">PERFECT</span> HAPPY <span style="color:rgb(165, 114, 32);">HOME</span></h1>
+      <p>Discover thoughtfully designed spaces that blend comfort, style, and value. Explore premium properties built to make every day feel like home.</p>
+      <div class="hero-buttons">
+        <button id="exploreBtn" class="btn">Explore Now →</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assests/home-img.png" alt="Modern house">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="assests/about-img.jpg" alt="About Real Estate" />
+    </div>
+
+    <div class="about-content">
+      <h1>About Us</h1>
+     <p>
+       Welcome to <strong>REW</strong>, your trusted platform for buying, selling, and renting properties. 
+       we have been dedicated to helping people find their dream homes and investment opportunities 
+       with honesty, transparency, and professionalism.
+     </p>
+     <p>
+       Our mission is to make real estate simple, secure, and accessible for everyone — 
+       whether you're searching for your first home or expanding your portfolio.
+     </p>
+
+      <div class="about-stats">
+        <div class="stat">
+          <h3>500+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+          <h3>150+</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+          <h3>25+</h3>
+          <p>Expert Agents</p>
+        </div>
+      </div>
+
+      <button class="btn">Learn More →</button>
+    </div>
+  </div>
+  <!-- ABOUT MODAL -->
+  <div id="aboutModal" class="about-modal">
+    <div class="about-modal-content">
+     <span id="closeAbout" class="close">&times;</span>
+     <h2>About Dream Home Real Estate</h2>
+     <p>
+        Dream Home Real Estate (REW) has been at the forefront of connecting people
+        with their perfect homes for over a decade. We combine innovation, expertise,
+        and trust to simplify the process of buying, selling, or renting.
+      </p>
+      <p>
+       Our dedicated agents ensure every client experiences a smooth journey —
+       from first consultation to final keys in hand. With transparency, integrity,
+       and a passion for excellence, we've helped over 500 happy clients find their
+       dream spaces.
+      </p>
+      <h3>Our Vision</h3>
+      <p>
+        To revolutionize the real estate market through cutting-edge technology,
+       personalized service, and an unwavering commitment to our clients' success.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section services-section">
+  <div class="page-header">
+    <h1>Our Services</h1>
+    <p>We make buying, selling, and renting properties simple and efficient.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="assests/service-1.jpg" alt="Buy a Home" class="service-icon">
+      <h3>Buy a Home</h3>
+      <p>Explore a wide range of properties and find your dream home with trusted agents and transparent pricing.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assests/service-2.jpg" alt="Rent a Home" class="service-icon">
+      <h3>Rent a Home</h3>
+      <p>Discover affordable and premium rental options tailored to your lifestyle, location, and budget preferences.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assests/service-3.jpg" alt="Sell a Home" class="service-icon">
+      <h3>Sell a Home</h3>
+      <p>Get expert guidance and maximum visibility to sell your property quickly at the best market value.</p>
+    </div>
+  </div>
+</section>
+
+
+<br><br><br><br><br>
+<!-- PROPERTIES -->
+<section id="properties" class="properties-section">
+  <div class="page-header">
+    <h5>Our Listings</h5>
+    <h1>Featured Properties</h1>
+    <p>Explore our latest homes, apartments, and villas available for sale and rent.</p>
+  </div>
+  <div class="hero-buttons">
+    <div class="btn-group">
+      <button id="buyBtn" class="ghost">Buy</button>
+      <button id="rentBtn" class="ghost">Rent</button>
+      <button id="allBtn" class="ghost">Show All</button>
+    </div>
+  </div>
+  
+  <div class="property-slider-wrapper">
+    <!-- SCROLLABLE LIST -->
+    <div class="property-slider" id="propertySlider">
+      <!-- Apartment 1 -->
+      <div class="property-card" data-type="buy">
+        <img src="assests/apartment-1.jpg" alt="Modern Apartment">
+        <div class="property-info">
+          <h3>Modern Apartment</h3>
+          <p>4BHK flats · 4 Beds · 4 Baths ·<br> 2000 sq ft</p>
+          <div class="price">₹98,24,000</div>
+        </div>
+      </div>
+
+      <!-- Apartment 2 -->
+      <div class="property-card" data-type="rent">
+        <img src="assests/apartment-2.webp" alt="City Apartment">
+        <div class="property-info">
+          <h3>City View Apartment</h3>
+          <p>4 Beds · 4 Baths · 2000 sq ft</p>
+          <div class="price">$1,295,000</div>
+        </div>
+      </div>
+
+      <!-- House 1 -->
+      <div class="property-card" data-type="buy">
+        <img src="assests/house-1.jpg" alt="Luxury House">
+        <div class="property-info">
+          <h3>Luxury Family House</h3>
+          <p>4 Beds · 3 Baths · 2600 sq ft</p>
+          <div class="price">$1,200,000</div>
+        </div>
+      </div>
+
+      <!-- House 2 -->
+      <div class="property-card" data-type="rent">
+        <img src="assests/house-2.jpg" alt="Classic House">
+        <div class="property-info">
+          <h3>Classic Suburban Home</h3>
+          <p>3 Beds · 2 Baths · 2000 sq ft</p>
+          <div class="price">$950,000</div>
+        </div>
+      </div>
+
+      <!-- Villa 1 -->
+      <div class="property-card" data-type="buy">
+        <img src="assests/villa-1.jpg" alt="Beach Villa">
+        <div class="property-info">
+          <h3>Beach Side Villa</h3>
+          <p>8 Beds · 10 Baths · <br>9672 Int · 4600 ext sq ft · 1 acre</p>
+          <div class="price">$14,500,000</div>
+        </div>
+      </div>
+
+      <!-- Villa 2 -->
+      <div class="property-card" data-type="rent">
+        <img src="assests/villa-2.jpg" alt="Mountain Villa">
+        <div class="property-info">
+          <h3>Mountain View Villa</h3>
+          <p>4 Beds · 5 Baths · 4100 sq ft</p>
+          <div class="price">₹75,00,000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Short & Centered Gold Scrollbar -->
+    <div class="slider-track" id="sliderTrack">
+      <div class="slider-thumb" id="sliderThumb"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOGS -->
+<section id="blog" class="blog-section">
+  <div class="page-header">
+    <h5>News & Blogs</h5>
+    <h1>Latest News Feeds</h1>
+    <p>Insights, updates, and trends from the world of real estate.</p>
+  </div>
+
+  <div class="blog-grid">
+    <!-- Blog Card 1 -->
+    <div class="blog-card">
+      <img src="assests/blog-1.jpg" alt="Interior Design" class="blog-img">
+      <div class="blog-info">
+        <span><i class="fa fa-user"></i> by Admin</span>
+        <span><i class="fa fa-tag"></i> Interior</span>
+      </div>
+      <h3>The Most Inspiring Interior Design of 2025</h3>
+      <div class="blog-meta">
+        <span><i class="fa fa-calendar"></i> Oct 10, 2025</span>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <img src="assests/blog-2.jpeg" alt="Real Estate Transactions" class="blog-img">
+      <div class="blog-info">
+        <span><i class="fa fa-user"></i> by Admin</span>
+        <span><i class="fa fa-tag"></i> Estate</span>
+      </div>
+      <h3>Recent Commercial Real Estate Transactions</h3>
+      <div class="blog-meta">
+        <span><i class="fa fa-calendar"></i> Oct 12, 2025</span>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <img src="assests/blog-3.webp" alt="Living Room Tips" class="blog-img">
+      <div class="blog-info">
+        <span><i class="fa fa-user"></i> by Admin</span>
+        <span><i class="fa fa-tag"></i> Room</span>
+      </div>
+      <h3>Renovating a Living Room? Experts Share Their Secrets</h3>
+      <div class="blog-meta">
+        <span><i class="fa fa-calendar"></i> Oct 14, 2025</span>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+    </div>
+  </div>
+  <!-- Blog Modal -->
+  <div id="blogModal" class="blog-modal">
+   <div class="blog-modal-content">
+     <span id="closeBlogModal" class="close">&times;</span>
+     <img id="modalImg" src="" alt="Blog Image">
+     <h2 id="modalTitle"></h2>
+     <p id="modalText"></p>
+   </div>
+  </div>
+</section>
+
+
+<br><br><br><br><br><br><br>
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Have a question or need expert guidance? We're here to help you make confident property decisions.
+      Whether you're interested in buying, renting, or listing your property, our team is ready to assist you 
+      with personalized support and reliable information.</p>
+
+      <div class="info-list">
+        <div><strong>📍 Address:</strong> 123 Real Estate Avenue, Bengaluru, India</div>
+        <div><strong>📞 Phone:</strong> +91 98076 54321</div>
+        <div><strong>✉️ Email:</strong> contactrew@realestate.com</div>
+      </div>
+    </div>
+
+    <form id="contactForm" class="contact-form">
+      <h3>Send Us a Message</h3>
+
+      <div class="input-group">
+        <label for="name" class="sr-only">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required autocomplete="name">
+        <label for="email" class="sr-only">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required autocomplete="email">
+      </div>
+
+      <label for="subject" class="sr-only">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject" required autocomplete="off">
+      <label for="message" class="sr-only">Your Message</label>
+      <textarea id="message" name="message" placeholder="Your Message" required autocomplete="off"></textarea>
+
+      <button class="btn">Send Message</button>
+
+    </form>
+  </div>
+</section>
+<footer class="footer">
+  <p>© 2025 RealEstate. All rights reserved.</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const exploreBtn = document.getElementById("exploreBtn");
+  const propertiesSection = document.getElementById("properties");
+
+  if (exploreBtn && propertiesSection) {
+    exploreBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      propertiesSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+</script>
+
+<script>
+  document.getElementById('buyBtn').addEventListener('click', () => {
+    document.querySelector('#properties').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('rentBtn').addEventListener('click', () => {
+    document.querySelector('#properties').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
+<script>
+  const buyBtn = document.getElementById('buyBtn');
+  const rentBtn = document.getElementById('rentBtn');
+  const allBtn = document.getElementById('allBtn');
+  const cards = document.querySelectorAll('.property-card');
+
+  buyBtn.addEventListener('click', () => {
+    cards.forEach(card => {
+      card.style.display = card.dataset.type === 'buy' ? 'block' : 'none';
+    });
+    document.querySelector('#properties').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  rentBtn.addEventListener('click', () => {
+    cards.forEach(card => {
+      card.style.display = card.dataset.type === 'rent' ? 'block' : 'none';
+    });
+    document.querySelector('#properties').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  allBtn.addEventListener('click', () => {
+    cards.forEach(card => {
+      card.style.display = 'block';
+    });
+    document.querySelector('#properties').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
+
+<script>
+  const openAdd = document.getElementById("open-add");
+  const addListModal = document.getElementById("addListModal");
+  const closeModal = document.querySelector(".close");
+  const propertyForm = document.getElementById("propertyForm");
+
+  // Open Modal
+  openAdd.addEventListener("click", () => {
+    addListModal.style.display = "flex";
+  });
+
+  // Close Modal
+  closeModal.addEventListener("click", () => {
+    addListModal.style.display = "none";
+  });
+
+  // Close when clicking outside
+  window.addEventListener("click", (e) => {
+    if (e.target === addListModal) {
+      addListModal.style.display = "none";
+    }
+  });
+
+  // Handle Form Submission
+  propertyForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("✅ Property added successfully!");
+    addListModal.style.display = "none";
+    propertyForm.reset();
+  });
+</script>
+
+<script>
+  const aboutModal = document.getElementById("aboutModal");
+  const closeAbout = document.getElementById("closeAbout");
+  const learnMoreBtn = document.querySelector(".about-section .btn, .about-section button, .about-section a[href*='Learn']");
+
+  // Open modal when Learn More clicked
+  if (learnMoreBtn) {
+    learnMoreBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      aboutModal.style.display = "flex";
+    });
+  }
+
+  // Close modal
+  closeAbout.addEventListener("click", () => (aboutModal.style.display = "none"));
+  window.addEventListener("click", (e) => {
+    if (e.target === aboutModal) aboutModal.style.display = "none";
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("propertySlider");
+  const track = document.getElementById("sliderTrack");
+  const thumb = document.getElementById("sliderThumb");
+
+  function updateThumb() {
+    const visible = slider.clientWidth;
+    const total = slider.scrollWidth;
+    const trackWidth = track.clientWidth;
+
+    if (total <= visible) {
+      thumb.style.width = trackWidth + "px";
+      thumb.style.transform = "translateX(0)";
+      return;
+    }
+
+    const thumbWidth = Math.max(50, (visible / total) * trackWidth);
+    thumb.style.width = thumbWidth + "px";
+
+    const maxThumbLeft = trackWidth - thumbWidth;
+    const maxScrollLeft = total - visible;
+    const ratio = slider.scrollLeft / maxScrollLeft;
+    const left = ratio * maxThumbLeft;
+    thumb.style.transform = `translateX(${left}px)`;
+  }
+
+  // Sync scrollbar on slider scroll
+  slider.addEventListener("scroll", updateThumb, { passive: true });
+
+  // Track click — smooth scroll left/right
+  track.addEventListener("click", (e) => {
+    if (e.target === thumb) return;
+    const rect = track.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const thumbRect = thumb.getBoundingClientRect();
+    const thumbCenter = thumbRect.left - rect.left + thumbRect.width / 2;
+    const scrollAmount = slider.clientWidth * 0.8;
+
+    if (clickX < thumbCenter) {
+      slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  });
+
+  // Dragging logic
+  let dragging = false;
+  let startX = 0;
+  let startLeft = 0;
+
+  thumb.addEventListener("mousedown", (e) => {
+    dragging = true;
+    startX = e.clientX;
+    const transform = getComputedStyle(thumb).transform;
+    startLeft = transform !== "none" ? parseFloat(transform.split(",")[4]) : 0;
+    document.body.style.userSelect = "none";
+    thumb.style.transition = "none";
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!dragging) return;
+    const rect = track.getBoundingClientRect();
+    const trackWidth = rect.width;
+    const thumbWidth = thumb.clientWidth;
+    let newLeft = startLeft + (e.clientX - startX);
+    newLeft = Math.max(0, Math.min(trackWidth - thumbWidth, newLeft));
+    thumb.style.transform = `translateX(${newLeft}px)`;
+
+    const ratio = newLeft / (trackWidth - thumbWidth);
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+    slider.scrollLeft = ratio * maxScrollLeft;
+  });
+
+  document.addEventListener("mouseup", () => {
+    if (!dragging) return;
+    dragging = false;
+    document.body.style.userSelect = "";
+    thumb.style.transition = "transform 0.1s ease";
+  });
+
+  window.addEventListener("resize", updateThumb);
+  window.addEventListener("load", updateThumb);
+});
+</script>
+
+<script>
+  const blogPosts = [
+    {
+      title: "The Most Inspiring Interior Design of 2025",
+      img: "assests/blog-1.jpg",
+      text: "Explore 2025’s most elegant interior trends — from minimalist black themes to luxury gold accents. These designs redefine sophistication and comfort with a modern touch."
+    },
+    {
+      title: "Recent Commercial Real Estate Transactions",
+      img: "assests/blog-2.jpeg",
+      text: "A deep dive into recent commercial property deals — how urban development and new investment patterns are shaping the future of real estate growth in major cities."
+    },
+    {
+      title: "Renovating a Living Room? Experts Share Their Secrets",
+      img: "assests/blog-3.webp",
+      text: "Experts reveal top strategies for modern living room makeovers — from lighting choices to color harmony. Transform your space effortlessly and stylishly."
+    }
+  ];
+
+  const modal = document.getElementById("blogModal");
+  const modalImg = document.getElementById("modalImg");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalText = document.getElementById("modalText");
+  const closeBtn = document.getElementById("closeBlogModal");
+
+  document.querySelectorAll(".read-more").forEach((btn, i) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      modal.style.display = "flex";
+      modalImg.src = blogPosts[i].img;
+      modalTitle.textContent = blogPosts[i].title;
+      modalText.textContent = blogPosts[i].text;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => (modal.style.display = "none"));
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+</script>
+
+<script>
+  // Wait until the DOM is ready
+  document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("✅ Thank you! Your message has been sent successfully.");
+        contactForm.reset();
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
