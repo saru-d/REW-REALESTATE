@@ -166,7 +166,7 @@ nav a:hover::after {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .hamburger span {
@@ -1378,6 +1378,7 @@ nav a:hover::after {
   white-space: nowrap;
   border: 0;
 }
+
 
 
 
