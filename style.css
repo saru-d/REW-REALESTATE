@@ -161,12 +161,12 @@ nav a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .hamburger span {
@@ -193,6 +193,7 @@ nav a:hover::after {
 @media (max-width: 900px) {
   .nav-actions {
     position: absolute;
+    pointer-events: auto;
     top: 70px;
     right: 20px;
     background: rgba(15, 15, 15, 0.97);
@@ -201,14 +202,19 @@ nav a:hover::after {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    display: none; /* hidden by default */
+    max-height: 0; /* hidden by default */
     width: 200px;
     animation: fadeIn 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    z-index: 999; /* below hamburger */
   }
 
   /* show when active */
   .nav-actions.active {
-    display: flex;
+    max-height: 500px;
+    padding: 20px;
   }
 
   nav {
@@ -232,8 +238,6 @@ nav a:hover::after {
     display: flex; /* show hamburger on mobile */
   }
 }
-
-
 
 /* ==========================================================
    HERO SECTION — full screen split layout
@@ -1373,3 +1377,4 @@ nav a:hover::after {
   white-space: nowrap;
   border: 0;
 }
+
